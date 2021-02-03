@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Workshop 1</title>
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <link href="css/brands.css" rel="stylesheet">
+    <link href="css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- NAVIGATIE -->
+    <header class="site-header sticky-top py-1">
+        <nav class="container d-flex flex-column flex-md-row justify-content-between">
+          <a class="py-2" href="#" aria-label="Product">
+            <img alt="" title="" src="img/favicon-32x32.png" />
+          </a>
+          <a class="py-2 d-none d-md-inline-block" href="#">PC</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">PlayStation</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">XBox</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">Accessoires</a>
+          <a class="py-2 d-none d-md-inline-block" href="#">Over ons</a>
+        </nav>
+      </header>
+      <!-- EINDE NAVIGATIE -->
+      
+      <main>
+        <!-- HERO BLOCK -->
+        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+            <div class="col-md-5 p-lg-5 mx-auto my-5">
+                <h1 class="display-4 fw-normal">Een Game Shop</h1>
+                <p class="lead fw-normal">Voorbeeld van een Game Webshop t.b.v. een JavaScript Workshop.</p>
+            </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        </div>
+        <!-- EINDE HERO BLOCK -->
+      
+        <!-- GAME LIST -->
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3" id="game-list">
+            <!-- GAME BLOK -->
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Ryse: Son of Rome</h2>
+                    <p class="lead">PC Game</p>
+                </div>
+                <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <div class="row">
+                        <div class="col" style="color: black;">
+                            <img class="game-img" src="https://games-api.ao-alfacollege.nl/img/ryse.jpeg" />
+                        </div>
+                        <div class="col" style="padding-top: 30px;">
+                            <div class="game-price">
+                                <span class="price">&euro; 19,95</span>
+                            </div>
+                            <p class="game-description description-dark">
+                                Ryse: Son of Rome is a third-person action-adventure hack and slash video game developed by Crytek and published by Microsoft Studios.
+                            </p>
+                            <div class="buttons">
+                                <button class="btn btn-dark buy-btn" data-game_id="1" data-gamename="Ryse: Son of Rome" data-gameprice="19,95"><i class="fas fa-shopping-cart"></i> Kopen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EINDE GAME BLOK -->
+            <!-- VOLGEND GAMEBLOK -->
+            <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+                    <h2 class="display-5">Watchdogs</h2>
+                    <p class="lead">PC Game</p>
+                </div>
+                <div class="bg-dark shadow-sm mx-auto" style="max-width: 80%; width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+                    <div class="row">
+                        <div class="col" style="color: black;">
+                            <img class="game-img" src="https://games-api.ao-alfacollege.nl/img/watchdogs.jpeg" />
+                        </div>
+                        <div class="col" style="padding-top: 30px;">
+                            <div class="game-price">
+                                <span class="price">&euro; 29,95</span>
+                            </div>
+                            <p class="game-description description-light">
+                                Watch Dogs is een open wereld-, action-adventure- en third-person shooter-spel ontwikkeld door Ubisoft Montreal en enkele andere dochterondernemingen van Ubisoft.
+                            </p>
+                            <div class="buttons">
+                                <button class="btn btn-light buy-btn" data-game_id="2" data-gamename="Watchdogs" data-gameprice="29,95"><i class="fas fa-shopping-cart"></i> Kopen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EINDE VOLGEND GAMEBLOK -->
+        </div>
+        <!-- EINDE GAMELIST -->
+
+        <!-- WINKELWAGEN -->
+        <div class="bg-light shopping-cart" id="shopping-cart">
+            <h2 class="display-5">Winkelwagen</h2>
+            <div class="shopping-cart-table">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Game</th>
+                            <th scope="col">Aantal</th>
+                            <th scope="col">Prijs</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="game-table-rows">
+                                                
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        <!-- EINDE GAME LIST -->
+      </main>
+      
+      <!-- FOOTER -->
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img alt="" title="" src="img/favicon-32x32.png" />
+            <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Cool stuff</a></li>
+              <li><a class="link-secondary" href="#">Random feature</a></li>
+              <li><a class="link-secondary" href="#">Team feature</a></li>
+              <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+              <li><a class="link-secondary" href="#">Another one</a></li>
+              <li><a class="link-secondary" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Resource name</a></li>
+              <li><a class="link-secondary" href="#">Resource</a></li>
+              <li><a class="link-secondary" href="#">Another resource</a></li>
+              <li><a class="link-secondary" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Business</a></li>
+              <li><a class="link-secondary" href="#">Education</a></li>
+              <li><a class="link-secondary" href="#">Government</a></li>
+              <li><a class="link-secondary" href="#">Gaming</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="#">Team</a></li>
+              <li><a class="link-secondary" href="#">Locations</a></li>
+              <li><a class="link-secondary" href="#">Privacy</a></li>
+              <li><a class="link-secondary" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- EINDE FOOTER -->
+      
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
